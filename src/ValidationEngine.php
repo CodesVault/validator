@@ -15,20 +15,25 @@ class ValidationEngine
 				break;
 			}
 
-			foreach ($rules as $rule) {
-				$val = null;
-				if (isset($this->inputData[$dataAttr])) {
-					$val = $this->inputData[$dataAttr];
-				}
-				$validate = (new $rule)->check($dataAttr, $val);
+			$this->execute($rules, $dataAttr);
+		}
+	}
 
-				if ($validate instanceof \Codesvault\Validator\ValidationError) {
-					$this->error = $validate;
-					break;
-				}
-
-				$this->setData($dataAttr, $val);
+	protected function execute($rules, $dataAttr)
+	{
+		foreach ($rules as $rule) {
+			$val = null;
+			if (isset($this->inputData[$dataAttr])) {
+				$val = $this->inputData[$dataAttr];
 			}
+			$validate = (new $rule)->check($dataAttr, $val);
+
+			if ($validate instanceof \Codesvault\Validator\ValidationError) {
+				$this->error = $validate;
+				break;
+			}
+
+			$this->setData($dataAttr, $val);
 		}
 	}
 
