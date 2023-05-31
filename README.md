@@ -1,2 +1,3 @@
 # validator
-Data validation library
+
+Data validation composer package.
