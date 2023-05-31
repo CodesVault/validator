@@ -3,6 +3,7 @@
 namespace Codesvault\Validator;
 
 use Codesvault\Validator\Rules\Alphabet;
+use Codesvault\Validator\Rules\AlphabetOnly;
 use Codesvault\Validator\Rules\AlphabetWithDash;
 use Codesvault\Validator\Rules\AlphabetWithNumber;
 use Codesvault\Validator\Rules\AlphabetWithSpaces;
@@ -31,6 +32,7 @@ class RulesIndex
 		$this->rules = [
             'required'			=> Required::class,
             'string'			=> Alphabet::class,
+			'stringOnly'		=> AlphabetOnly::class,
             'stringWithDash'	=> AlphabetWithDash::class,
             'stringWithNumber'	=> AlphabetWithNumber::class,
             'stringWithSpace'	=> AlphabetWithSpaces::class,
