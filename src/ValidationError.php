@@ -21,8 +21,11 @@ class ValidationError
 	public function errorMessage()
 	{
 		$this->errorMessage = [
-			'required' => "{$this->attribute} is required",
-			'string' => "{$this->attribute} only allows alphabet characters",
+			'required'				=> "{$this->attribute} is required",
+			'string'				=> "{$this->attribute} only allows alphabet characters",
+			'stringWithDash'		=> "{$this->attribute} only allows a-z with 0-9, _ and -",
+			'stringWithNumber'		=> "{$this->attribute} only allows alphabet and numebers",
+			'stringWithSpace'		=> "{$this->attribute} only allows alphabet and spaces",
 		];
 	}
 

@@ -10,9 +10,9 @@ class Validator
 	 * @param array $rules
      * @param array $data
 	 *
-     * @return Codesvault\Validator\ValidationError
+     * @return Codesvault\Validator\ValidationEngine
      */
-    public static function validate(array $rules, array $data)
+    public static function validate(array $rules, array $data = [])
     {
         $validation = Factory::make($rules, $data);
         return $validation;

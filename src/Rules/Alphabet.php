@@ -7,7 +7,7 @@ use Codesvault\Validator\ValidationError;
 class Alphabet implements Rule
 {
     /**
-     * Check the $value is valid
+     * Check the $value is valid string
      *
 	 * @param string $dataAttr
      * @param mixed $value
@@ -16,7 +16,8 @@ class Alphabet implements Rule
      */
     public function check($dataAttr, $value)
     {
-        $val = is_string($value) && preg_match('/^[\pL\pM]+$/u', $value);
+		// is_string($value) && preg_match('/^[\pL\pM]+$/u', $value);
+        $val = is_string($value);
 		if ($val) {
 			return true;
 		}
