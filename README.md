@@ -26,11 +26,11 @@ It'll get data from `$_REQUEST` by default. But you also can pass data as second
 $validator = Validator::validate(
     [
         'username'	=> 'required|stringOnly',
-        'full_name'	=> 'stringWithSpace',
+        'full_name'	=> 'stringWithSpace'
     ],
 	[
 		'username'	=> 'abmsourav',
-		'full_name'	=> 'Keramot UL Islam',
+		'full_name'	=> 'Keramot UL Islam'
 	]
 );
 ```
