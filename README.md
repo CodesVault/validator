@@ -40,8 +40,7 @@ $validator = Validator::validate(
 `validate` method will return an object of `ValidationEngine` class.
 
 ```php
-$error = $validator->error();
-if ($error) {
+if ($validator->error()) {
 	return $validator->getErrorList();
 }
 
