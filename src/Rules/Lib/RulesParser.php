@@ -21,7 +21,7 @@ class RulesParser
 		$rules = [];
 		$sets = explode('|', $ruleset);
 		foreach ($sets as $rule) {
-			$ruleName = $this->sizeTypeHandler($rule);
+			$ruleName = $this->attributeHandler($rule);
 			$rules[$ruleName] = ['rule_checker' => (new RulesIndex)->getRule($ruleName)];
 
 			if ($this->attribute) {
@@ -32,11 +32,16 @@ class RulesParser
 		return $rules;
 	}
 
-	protected function sizeTypeHandler($ruleName)
+	protected function attributeHandler($ruleName)
 	{
 		$rule = explode(':', $ruleName);
 
 		if ('min' === $rule[0] || 'max' === $rule[0]) {
+			$this->attribute = $rule[1];
+			return $rule[0];
+		}
+
+		if ('sameValue' === $rule[0]) {
 			$this->attribute = $rule[1];
 			return $rule[0];
 		}

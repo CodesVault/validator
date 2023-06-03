@@ -30,14 +30,13 @@ class ValidationError
 			'stringWithNumber'		=> "`{$this->dataIdentifier}` only allows alphabet and numebers",
 			'stringWithSpace'		=> "`{$this->dataIdentifier}` only allows alphabet and spaces",
 
-			'email'					=> "`{$this->dataIdentifier}` only allows valid email address",
-
 			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
 			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",
 
+			'email'					=> "`{$this->dataIdentifier}` only allows valid email address",
 			'integer'				=> "`{$this->dataIdentifier}` only allows integer type",
-
 			'url'					=> "`{$this->dataIdentifier}` only allows valid URL",
+			'sameValue'				=> "`{$this->dataIdentifier}` only allows same value as {$this->attribute}",
 		];
 	}
 

@@ -12,6 +12,7 @@ use Codesvault\Validator\Rules\Integer;
 use Codesvault\Validator\Rules\MaxLength;
 use Codesvault\Validator\Rules\MinLength;
 use Codesvault\Validator\Rules\Required;
+use Codesvault\Validator\Rules\SameValue;
 use Codesvault\Validator\Rules\Url;
 
 class RulesIndex
@@ -42,14 +43,13 @@ class RulesIndex
             'stringWithNumber'	=> AlphabetWithNumber::class,
             'stringWithSpace'	=> AlphabetWithSpaces::class,
 
-            'email'				=> Email::class,
-
 			'min'				=> MinLength::class,
 			'max'				=> MaxLength::class,
 
+            'email'				=> Email::class,
 			'integer'			=> Integer::class,
-
 			'url'				=> Url::class,
+			'sameValue'			=> SameValue::class,
         ];
 	}
 }
