@@ -16,8 +16,7 @@ class Alphabet implements Rule
      */
     public function check($dataIdentifier, $value, $attribute = null)
     {
-        $val = is_string($value);
-		if (! $val) {
+		if (! is_string($value) || empty($value)) {
 			return new ValidationError('string', $dataIdentifier, $value);
 		}
 
