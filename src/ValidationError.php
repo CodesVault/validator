@@ -6,14 +6,16 @@ class ValidationError
 {
 	protected $type;
 	protected $value;
+	protected $dataIdentifier;
 	protected $attribute;
 	protected $errorMessage = [];
 
-	public function __construct($type, $attr, $value)
+	public function __construct($type, $dataIdentifier, $value, $attribute = null)
 	{
 		$this->type = $type;
 		$this->value = $value;
-		$this->attribute = $attr;
+		$this->dataIdentifier = $dataIdentifier;
+		$this->attribute = $attribute;
 
 		$this->errorMessage();
 	}
@@ -21,14 +23,16 @@ class ValidationError
 	public function errorMessage()
 	{
 		$this->errorMessage = [
-			'required'				=> "`{$this->attribute}` is required",
-			'string'				=> "`{$this->attribute}` only allows string type",
-			'stringOnly'			=> "`{$this->attribute}` only allows alphabet characters",
-			'stringWithDash'		=> "`{$this->attribute}` only allows a-z with 0-9, _ and -",
-			'stringWithNumber'		=> "`{$this->attribute}` only allows alphabet and numebers",
-			'stringWithSpace'		=> "`{$this->attribute}` only allows alphabet and spaces",
+			'required'				=> "`{$this->dataIdentifier}` is required",
+			'string'				=> "`{$this->dataIdentifier}` only allows string type",
+			'stringOnly'			=> "`{$this->dataIdentifier}` only allows alphabet characters",
+			'stringWithDash'		=> "`{$this->dataIdentifier}` only allows a-z with 0-9, _ and -",
+			'stringWithNumber'		=> "`{$this->dataIdentifier}` only allows alphabet and numebers",
+			'stringWithSpace'		=> "`{$this->dataIdentifier}` only allows alphabet and spaces",
 
-			'email'					=> "`{$this->attribute}` only allows valid email address",
+			'email'					=> "`{$this->dataIdentifier}` only allows valid email address",
+
+			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
 		];
 	}
 

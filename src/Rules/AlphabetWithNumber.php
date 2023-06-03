@@ -9,18 +9,18 @@ class AlphabetWithNumber implements Rule
     /**
      * Check the $value is valid
      *
-	 * @param string $dataAttr
+	 * @param string $dataIdentifier
      * @param mixed $value
 	 *
      * @return bool|\Codesvault\Validator\ValidationError
      */
-    public function check($dataAttr, $value)
+    public function check($dataIdentifier, $value, $attribute = null)
     {
         if (! is_string($value)) {
-            return new ValidationError('stringWithNumber', $dataAttr, $value);
+            return new ValidationError('stringWithNumber', $dataIdentifier, $value);
         }
 		if (preg_match('/^[\pL\pM\pN]+$/u', $value) <= 0) {
-			return new ValidationError('stringWithNumber', $dataAttr, $value);
+			return new ValidationError('stringWithNumber', $dataIdentifier, $value);
 		}
 
 		return true;

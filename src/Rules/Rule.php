@@ -4,5 +4,5 @@ namespace Codesvault\Validator\Rules;
 
 interface Rule
 {
-    public function check($attr, $value);
+    public function check($dataIdentifier, $value, $attribute = null);
 }

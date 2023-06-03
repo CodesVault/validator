@@ -11,25 +11,26 @@ class ValidationEngine
 	public function validate($rulesSet)
 	{
 		$this->errorLogHandler = new ErrorLogHandler;
-		foreach ($rulesSet as $dataAttr => $rules) {
-			$this->execute($rules, $dataAttr);
+		foreach ($rulesSet as $dataIdentifier => $rules) {
+			$this->execute($rules, $dataIdentifier);
 		}
 	}
 
-	protected function execute($rules, $dataAttr)
+	protected function execute($rules, $dataIdentifier)
 	{
 		foreach ($rules as $rule) {
 			$val = null;
-			if (isset($this->inputData[$dataAttr])) {
-				$val = $this->inputData[$dataAttr];
+			if (isset($this->inputData[$dataIdentifier])) {
+				$val = $this->inputData[$dataIdentifier];
 			}
-			$validate = (new $rule)->check($dataAttr, $val);
+			$attribute = isset($rule['attribute']) ? $rule['attribute'] : null;
+			$validate = (new $rule['rule_checker'])->check($dataIdentifier, $val, $attribute);
 
 			if ($validate instanceof \Codesvault\Validator\ValidationError) {
-				$this->errorLogHandler->add($dataAttr, $validate->getErrorMessage());
+				$this->errorLogHandler->add($dataIdentifier, $validate->getErrorMessage());
 			}
 
-			$this->setData($dataAttr, $val);
+			$this->setData($dataIdentifier, $val);
 		}
 	}
 

@@ -9,16 +9,16 @@ class AlphabetOnly implements Rule
     /**
      * Check the $value is valid string
      *
-	 * @param string $dataAttr
+	 * @param string $dataIdentifier
      * @param mixed $value
 	 *
      * @return bool|\Codesvault\Validator\ValidationError
      */
-    public function check($dataAttr, $value)
+    public function check($dataIdentifier, $value, $attribute = null)
     {
         $val = is_string($value) && preg_match('/^[\pL\pM]+$/u', $value);
 		if (! $val) {
-			return new ValidationError('stringOnly', $dataAttr, $value);
+			return new ValidationError('stringOnly', $dataIdentifier, $value);
 		}
 
 		return true;
