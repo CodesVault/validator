@@ -4,7 +4,7 @@ namespace Codesvault\Validator\Rules;
 
 use Codesvault\Validator\Exceptions\ValidationError;
 
-class Required implements Rule
+class Integer implements Rule
 {
     /**
      * Check the value is not empty or null
@@ -16,15 +16,9 @@ class Required implements Rule
      */
     public function check($dataIdentifier, $value, $attribute = null)
     {
-        if (is_string($value) && mb_strlen(trim($value), 'UTF-8') <= 0) {
-			return new ValidationError('required', $dataIdentifier, $value);
+        if (! filter_var($value, FILTER_VALIDATE_INT)) {
+			return new ValidationError('integer', $dataIdentifier, $value);
         }
-		if (is_array($value) && count($value) <= 0) {
-			return new ValidationError('required', $dataIdentifier, $value);
-		}
-		if (is_null($value)) {
-			return new ValidationError('required', $dataIdentifier, $value);
-		}
 
 		return true;
     }

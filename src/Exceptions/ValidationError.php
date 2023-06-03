@@ -34,6 +34,8 @@ class ValidationError
 
 			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
 			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",
+
+			'integer'				=> "`{$this->dataIdentifier}` only allows integer type",
 		];
 	}
 
