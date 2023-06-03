@@ -16,11 +16,11 @@ class Alphabet implements Rule
      */
     public function check($dataAttr, $value)
     {
-		// is_string($value) && preg_match('/^[\pL\pM]+$/u', $value);
         $val = is_string($value);
-		if ($val) {
-			return true;
+		if (! $val) {
+			return new ValidationError('string', $dataAttr, $value);
 		}
-		return new ValidationError('string', $dataAttr, $value);
+
+		return true;
     }
 }

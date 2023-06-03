@@ -17,9 +17,10 @@ class AlphabetOnly implements Rule
     public function check($dataAttr, $value)
     {
         $val = is_string($value) && preg_match('/^[\pL\pM]+$/u', $value);
-		if ($val) {
-			return true;
+		if (! $val) {
+			return new ValidationError('stringOnly', $dataAttr, $value);
 		}
-		return new ValidationError('stringOnly', $dataAttr, $value);
+
+		return true;
     }
 }
