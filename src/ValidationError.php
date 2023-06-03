@@ -33,6 +33,7 @@ class ValidationError
 			'email'					=> "`{$this->dataIdentifier}` only allows valid email address",
 
 			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
+			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",
 		];
 	}
 
