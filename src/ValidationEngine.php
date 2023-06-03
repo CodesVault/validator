@@ -4,13 +4,13 @@ namespace Codesvault\Validator;
 
 class ValidationEngine
 {
-	protected $error = false;
-	protected $errorList = [];
+	protected $errorLogHandler;
 	protected $inputData;
 	protected $data = [];
 
 	public function validate($rulesSet)
 	{
+		$this->errorLogHandler = new ErrorLogHandler;
 		foreach ($rulesSet as $dataAttr => $rules) {
 			$this->execute($rules, $dataAttr);
 		}
@@ -26,8 +26,7 @@ class ValidationEngine
 			$validate = (new $rule)->check($dataAttr, $val);
 
 			if ($validate instanceof \Codesvault\Validator\ValidationError) {
-				$this->error = ! $this->error ? $validate : $this->error;
-				$this->setErrorList($dataAttr, $validate->getErrorMessage());
+				$this->errorLogHandler->add($dataAttr, $validate->getErrorMessage());
 			}
 
 			$this->setData($dataAttr, $val);
@@ -36,17 +35,7 @@ class ValidationEngine
 
 	public function error()
 	{
-		return $this->error;
-	}
-
-	protected function setErrorList($dataAttr, $errorMessage)
-	{
-		$this->errorList[$dataAttr] = $errorMessage;
-	}
-
-	public function getErrorList()
-	{
-		return $this->errorList;
+		return $this->errorLogHandler->get();
 	}
 
 	public function setInputData($data)
