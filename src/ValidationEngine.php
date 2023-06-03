@@ -2,6 +2,8 @@
 
 namespace Codesvault\Validator;
 
+use Codesvault\Validator\Exceptions\ErrorLogHandler;
+
 class ValidationEngine
 {
 	protected $errorLogHandler;
@@ -26,7 +28,7 @@ class ValidationEngine
 			$attribute = isset($rule['attribute']) ? $rule['attribute'] : null;
 			$validate = (new $rule['rule_checker'])->check($dataIdentifier, $val, $attribute);
 
-			if ($validate instanceof \Codesvault\Validator\ValidationError) {
+			if ($validate instanceof \Codesvault\Validator\Exceptions\ValidationError) {
 				$this->errorLogHandler->add($dataIdentifier, $validate->getErrorMessage());
 			}
 

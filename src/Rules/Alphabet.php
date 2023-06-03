@@ -2,7 +2,7 @@
 
 namespace Codesvault\Validator\Rules;
 
-use Codesvault\Validator\ValidationError;
+use Codesvault\Validator\Exceptions\ValidationError;
 
 class Alphabet implements Rule
 {
@@ -12,7 +12,7 @@ class Alphabet implements Rule
 	 * @param string $dataIdentifier
      * @param mixed $value
 	 *
-     * @return bool|\Codesvault\Validator\ValidationError
+     * @return bool|\Codesvault\Validator\Exceptions\ValidationError
      */
     public function check($dataIdentifier, $value, $attribute = null)
     {

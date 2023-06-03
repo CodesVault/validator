@@ -3,7 +3,7 @@
 namespace Codesvault\Validator\Rules;
 
 use Codesvault\Validator\Rules\Lib\Calculate;
-use Codesvault\Validator\ValidationError;
+use Codesvault\Validator\Exceptions\ValidationError;
 
 class MinLength implements Rule
 {
@@ -17,7 +17,7 @@ class MinLength implements Rule
 	 * @param string $dataIdentifier
      * @param mixed $value
 	 *
-     * @return bool|\Codesvault\Validator\ValidationError
+     * @return bool|\Codesvault\Validator\Exceptions\ValidationError
      */
     public function check($dataIdentifier, $value, $attribute = null)
     {

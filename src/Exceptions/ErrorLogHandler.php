@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesvault\Validator;
+namespace Codesvault\Validator\Exceptions;
 
 class ErrorLogHandler
 {
