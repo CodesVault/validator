@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesvault\Validator;
+namespace Codesvault\Validator\Rules\Lib;
 
 use Codesvault\Validator\Rules\Alphabet;
 use Codesvault\Validator\Rules\AlphabetOnly;

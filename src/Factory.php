@@ -2,6 +2,8 @@
 
 namespace Codesvault\Validator;
 
+use Codesvault\Validator\Rules\Lib\RulesParser;
+
 class Factory
 {
 	/**
