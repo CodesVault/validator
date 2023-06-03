@@ -7,6 +7,7 @@ use Codesvault\Validator\Rules\AlphabetOnly;
 use Codesvault\Validator\Rules\AlphabetWithDash;
 use Codesvault\Validator\Rules\AlphabetWithNumber;
 use Codesvault\Validator\Rules\AlphabetWithSpaces;
+use Codesvault\Validator\Rules\Email;
 use Codesvault\Validator\Rules\Required;
 
 class RulesIndex
@@ -36,7 +37,7 @@ class RulesIndex
             'stringWithDash'	=> AlphabetWithDash::class,
             'stringWithNumber'	=> AlphabetWithNumber::class,
             'stringWithSpace'	=> AlphabetWithSpaces::class,
-            // 'email'                     => new Rules\Email,
+            'email'				=> Email::class,
             // 'numeric'                   => new Rules\Numeric,
             // 'alpha_num'                 => new Rules\AlphaNum,
             // 'alpha_dash'                => new Rules\AlphaDash,
