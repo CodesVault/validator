@@ -12,6 +12,7 @@ use Codesvault\Validator\Rules\Integer;
 use Codesvault\Validator\Rules\MaxLength;
 use Codesvault\Validator\Rules\MinLength;
 use Codesvault\Validator\Rules\Required;
+use Codesvault\Validator\Rules\Url;
 
 class RulesIndex
 {
@@ -47,33 +48,8 @@ class RulesIndex
 			'max'				=> MaxLength::class,
 
 			'integer'			=> Integer::class,
-            // 'numeric'                   => new Rules\Numeric,
-            // 'alpha_num'                 => new Rules\AlphaNum,
-            // 'alpha_dash'                => new Rules\AlphaDash,
-            // 'alpha_spaces'              => new Rules\AlphaSpaces,
-            // 'in'                        => new Rules\In,
-            // 'not_in'                    => new Rules\NotIn,
-            // 'min'                       => new Rules\Min,
-            // 'max'                       => new Rules\Max,
-            // 'between'                   => new Rules\Between,
-            // 'url'                       => new Rules\Url,
-            // 'integer'                   => new Rules\Integer,
-            // 'boolean'                   => new Rules\Boolean,
-            // 'ip'                        => new Rules\Ip,
-            // 'ipv4'                      => new Rules\Ipv4,
-            // 'ipv6'                      => new Rules\Ipv6,
-            // 'extension'                 => new Rules\Extension,
-            // 'array'                     => new Rules\TypeArray,
-            // 'same'                      => new Rules\Same,
-            // 'regex'                     => new Rules\Regex,
-            // 'date'                      => new Rules\Date,
-            // 'uploaded_file'             => new Rules\UploadedFile,
-            // 'mimes'                     => new Rules\Mimes,
-            // 'callback'                  => new Rules\Callback,
-            // 'json'                      => new Rules\Json,
-            // 'digits'                    => new Rules\Digits,
-            // 'defaults'                  => new Rules\Defaults,
-            // 'default'                   => new Rules\Defaults,
+
+			'url'				=> Url::class,
         ];
 	}
 }

@@ -36,6 +36,8 @@ class ValidationError
 			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",
 
 			'integer'				=> "`{$this->dataIdentifier}` only allows integer type",
+
+			'url'					=> "`{$this->dataIdentifier}` only allows valid URL",
 		];
 	}
 
