@@ -43,7 +43,7 @@ class ValidationEngine
 
 	public function setInputData($data)
 	{
-		$this->inputData = empty($data) ? $_REQUEST : $data;
+		$this->inputData = array_merge($_REQUEST, $data);
 	}
 
 	protected function setData($key, $value)
