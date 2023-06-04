@@ -1,6 +1,6 @@
 {
     "name": "codesvault/validator",
-    "description": "Data validator library",
+    "description": "Data validatiion library",
     "version": "1.0.0",
     "type": "library",
     "license": "MIT",
