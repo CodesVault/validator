@@ -2,6 +2,7 @@
 
 namespace Codesvault\Validator\Rules;
 
+use Codesvault\Validator\Rules\Lib\Rule;
 use Codesvault\Validator\Exceptions\ValidationError;
 
 class Required implements Rule

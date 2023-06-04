@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesvault\Validator\Rules;
+namespace Codesvault\Validator\Rules\Lib;
 
 interface Rule
 {

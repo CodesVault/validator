@@ -2,6 +2,7 @@
 
 namespace Codesvault\Validator\Rules;
 
+use Codesvault\Validator\Rules\Lib\Rule;
 use Codesvault\Validator\Rules\Lib\Calculate;
 use Codesvault\Validator\Exceptions\ValidationError;
 
