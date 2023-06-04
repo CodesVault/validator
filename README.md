@@ -18,8 +18,8 @@ composer require codesvault/validator
 ```php
 $validator = Validator::validate(
     [
-        'username'	=> 'required|stringOnly',
-        'full_name'	=> 'stringWithSpace',
+		'username'	=> 'required|stringOnly',
+		'full_name'	=> 'stringWithSpace',
 		'password'	=> 'required|min:8',
 		'email'		=> 'required|email',
     ],
@@ -32,10 +32,10 @@ It'll get data from `$_REQUEST` by default. But you also can pass data as second
 
 ```php
 $validator = Validator::validate(
-    [
-        'username'	=> 'required|stringOnly',
-        'full_name'	=> 'stringWithSpace'
-    ],
+	[
+		'username'	=> 'required|stringOnly',
+		'full_name'	=> 'stringWithSpace'
+	],
 	[
 		'username'	=> 'abmsourav',
 		'full_name'	=> 'Keramot UL Islam'
