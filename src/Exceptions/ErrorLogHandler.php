@@ -13,7 +13,7 @@ class ErrorLogHandler
 
 	public function add($attr, $message)
 	{
-		$this->queue[$attr] = $message;
+		$this->queue[$attr][] = $message;
 	}
 
 	public function get()
