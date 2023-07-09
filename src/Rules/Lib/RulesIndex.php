@@ -13,6 +13,7 @@ use Codesvault\Validator\Rules\MaxLength;
 use Codesvault\Validator\Rules\MinLength;
 use Codesvault\Validator\Rules\Required;
 use Codesvault\Validator\Rules\SameValue;
+use Codesvault\Validator\Rules\Uppercase;
 use Codesvault\Validator\Rules\Url;
 
 class RulesIndex
@@ -42,6 +43,7 @@ class RulesIndex
             'stringWithDash'	=> AlphabetWithDash::class,
             'stringWithNumber'	=> AlphabetWithNumber::class,
             'stringWithSpace'	=> AlphabetWithSpaces::class,
+			'stringUppercase'	=> Uppercase::class,
 
 			'min'				=> MinLength::class,
 			'max'				=> MaxLength::class,

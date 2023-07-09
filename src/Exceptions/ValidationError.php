@@ -29,6 +29,7 @@ class ValidationError
 			'stringWithDash'		=> "`{$this->dataIdentifier}` only allows a-z with 0-9, _ and -",
 			'stringWithNumber'		=> "`{$this->dataIdentifier}` only allows alphabet and numebers",
 			'stringWithSpace'		=> "`{$this->dataIdentifier}` only allows alphabet and spaces",
+			'stringUppercase'		=> "`{$this->dataIdentifier}` only allows uppercase alphabet characters",
 
 			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
 			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",
