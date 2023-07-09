@@ -5,7 +5,7 @@ namespace Codesvault\Validator\Rules;
 use Codesvault\Validator\Rules\Lib\Rule;
 use Codesvault\Validator\Exceptions\ValidationError;
 
-class StringLowercase implements Rule
+class Uppercase implements Rule
 {
     /**
      * Check the $value is valid string
@@ -19,10 +19,10 @@ class StringLowercase implements Rule
     {
 		if (empty($value)) return true;
 		if (! is_string($value)) {
-			return new ValidationError('stringLowercase', $dataIdentifier, $value);
+			return new ValidationError('uppercase', $dataIdentifier, $value);
 		}
-		if (mb_strtolower($value, mb_detect_encoding($value)) !== $value) {
-			return new ValidationError('stringLowercase', $dataIdentifier, $value);
+		if (mb_strtoupper($value, mb_detect_encoding($value)) !== $value) {
+			return new ValidationError('uppercase', $dataIdentifier, $value);
 		}
 
 		return true;

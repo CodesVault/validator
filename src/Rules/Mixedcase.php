@@ -19,10 +19,10 @@ class Mixedcase implements Rule
     {
 		if (empty($value)) return true;
 		if (! is_string($value)) {
-			return new ValidationError('stringMixedCase', $dataIdentifier, $value);
+			return new ValidationError('mixedCase', $dataIdentifier, $value);
 		}
 		if (! preg_match('/(\p{Ll}+.*\p{Lu})|(\p{Lu}+.*\p{Ll})/u', $value)) {
-			return new ValidationError('stringMixedCase', $dataIdentifier, $value);
+			return new ValidationError('mixedCase', $dataIdentifier, $value);
 		}
 
 		return true;

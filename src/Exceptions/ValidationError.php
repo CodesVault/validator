@@ -29,10 +29,10 @@ class ValidationError
 			'stringWithDash'		=> "`{$this->dataIdentifier}` only allows a-z with 0-9, _ and -",
 			'stringWithNumber'		=> "`{$this->dataIdentifier}` only allows alphabet and numebers",
 			'stringWithSpace'		=> "`{$this->dataIdentifier}` only allows alphabet and spaces",
-			'stringUppercase'		=> "`{$this->dataIdentifier}` only allows uppercase alphabet characters",
-			'stringMixedCase'		=> "`{$this->dataIdentifier}` only allows upper & lower case alphabet characters",
+			'uppercase'				=> "`{$this->dataIdentifier}` only allows uppercase alphabet characters",
+			'lowercase'				=> "`{$this->dataIdentifier}` only allows lowercase alphabet characters",
+			'mixedCase'				=> "`{$this->dataIdentifier}` only allows upper & lower case alphabet characters",
 			'stringWithSymbols'		=> "`{$this->dataIdentifier}` only allows alphabet characters with symbols",
-			'stringLowercase'		=> "`{$this->dataIdentifier}` only allows lowercase alphabet characters",
 
 			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
 			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",
