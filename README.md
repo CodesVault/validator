@@ -76,6 +76,7 @@ $validator->getData();
 | stringWithNumber | Check the value is string with number. |
 | stringWithDash | Check the value is string with dash and underscore. |
 | stringUppercase | Check the value is string with upper case. |
+| stringLowercase | Check the value is string with lower case. |
 | stringMixedCase | Check the value is string with upper and lower case. |
 | stringWithSymbols | Check the value is string with symbols. |
 | min | Check the value is greater than or equal to the given value. |
