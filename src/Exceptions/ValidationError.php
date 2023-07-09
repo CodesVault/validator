@@ -30,6 +30,7 @@ class ValidationError
 			'stringWithNumber'		=> "`{$this->dataIdentifier}` only allows alphabet and numebers",
 			'stringWithSpace'		=> "`{$this->dataIdentifier}` only allows alphabet and spaces",
 			'stringUppercase'		=> "`{$this->dataIdentifier}` only allows uppercase alphabet characters",
+			'stringMixedCase'		=> "`{$this->dataIdentifier}` only allows upper & lower case alphabet characters",
 
 			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
 			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",

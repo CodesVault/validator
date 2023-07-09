@@ -11,6 +11,7 @@ use Codesvault\Validator\Rules\Email;
 use Codesvault\Validator\Rules\Integer;
 use Codesvault\Validator\Rules\MaxLength;
 use Codesvault\Validator\Rules\MinLength;
+use Codesvault\Validator\Rules\Mixedcase;
 use Codesvault\Validator\Rules\Required;
 use Codesvault\Validator\Rules\SameValue;
 use Codesvault\Validator\Rules\Uppercase;
@@ -44,6 +45,7 @@ class RulesIndex
             'stringWithNumber'	=> AlphabetWithNumber::class,
             'stringWithSpace'	=> AlphabetWithSpaces::class,
 			'stringUppercase'	=> Uppercase::class,
+			'stringMixedCase'	=> Mixedcase::class,
 
 			'min'				=> MinLength::class,
 			'max'				=> MaxLength::class,
