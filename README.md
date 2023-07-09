@@ -67,15 +67,17 @@ $validator->getData();
 
 | Rule | Description |
 | --- | --- |
-| required | Check if the field under validation is present in the input data and is not empty. |
-| email | Check if the field under validation is valid email address. |
-| url | Check if the field under validation is valid url. |
-| string | Check if the field under validation is string. |
-| stringOnly | Check if the field under validation is only string charecters. |
-| stringWithSpace | Check if the field under validation is string with space. |
-| stringWithNumber | Check if the field under validation is string with number. |
-| StringWithDash | Check if the field under validation is string with dash and underscore. |
-| min | Check if the field under validation is greater than or equal to the given value. |
-| max | Check if the field under validation is less than or equal to the given value. |
-| integer | Check if the field under validation is integer. |
-| sameValue | Check if the field under validation is same as the given value. |
+| required | Check the value is present in the input data and is not empty. |
+| email | Check the value is valid email address. |
+| url | Check the value is valid url. |
+| string | Check the value is string. |
+| stringOnly | Check the value is only string charecters. |
+| stringWithSpace | Check the value is string with space. |
+| stringWithNumber | Check the value is string with number. |
+| stringWithDash | Check the value is string with dash and underscore. |
+| stringUppercase | Check the value is string with upper case. |
+| stringMixedCase | Check the value is string with upper and lower case. |
+| min | Check the value is greater than or equal to the given value. |
+| max | Check the value is less than or equal to the given value. |
+| integer | Check the value is integer. |
+| sameValue | Check the value is same as the given value. |
