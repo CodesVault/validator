@@ -14,6 +14,8 @@ use Codesvault\Validator\Rules\MinLength;
 use Codesvault\Validator\Rules\Mixedcase;
 use Codesvault\Validator\Rules\Required;
 use Codesvault\Validator\Rules\SameValue;
+use Codesvault\Validator\Rules\StringLowercase;
+use Codesvault\Validator\Rules\StringUppercase;
 use Codesvault\Validator\Rules\StringWithSymbol;
 use Codesvault\Validator\Rules\Uppercase;
 use Codesvault\Validator\Rules\Url;
@@ -45,9 +47,10 @@ class RulesIndex
             'stringWithDash'	=> AlphabetWithDash::class,
             'stringWithNumber'	=> AlphabetWithNumber::class,
             'stringWithSpace'	=> AlphabetWithSpaces::class,
-			'stringUppercase'	=> Uppercase::class,
+			'stringUppercase'	=> StringUppercase::class,
 			'stringMixedCase'	=> Mixedcase::class,
 			'stringWithSymbols'	=> StringWithSymbol::class,
+			'stringLowercase'	=> StringLowercase::class,
 
 			'min'				=> MinLength::class,
 			'max'				=> MaxLength::class,

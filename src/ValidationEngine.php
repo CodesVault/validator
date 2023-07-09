@@ -25,6 +25,12 @@ class ValidationEngine
 			if (isset($this->inputData[$dataIdentifier])) {
 				$val = $this->inputData[$dataIdentifier];
 			}
+
+			// if the rule is not required and the value is empty then skip the validation
+			if (false === strpos($rule['rule_checker'], 'Required') && empty($val)) {
+				return $this->setData($dataIdentifier, $val);
+			}
+
 			$attribute = isset($rule['attribute']) ? $rule['attribute'] : null;
 			$validate = (new $rule['rule_checker'])->check($dataIdentifier, $val, $attribute);
 

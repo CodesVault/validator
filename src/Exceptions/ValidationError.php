@@ -32,6 +32,7 @@ class ValidationError
 			'stringUppercase'		=> "`{$this->dataIdentifier}` only allows uppercase alphabet characters",
 			'stringMixedCase'		=> "`{$this->dataIdentifier}` only allows upper & lower case alphabet characters",
 			'stringWithSymbols'		=> "`{$this->dataIdentifier}` only allows alphabet characters with symbols",
+			'stringLowercase'		=> "`{$this->dataIdentifier}` only allows lowercase alphabet characters",
 
 			'min'					=> "`{$this->dataIdentifier}` required minimum {$this->attribute} characters",
 			'max'					=> "`{$this->dataIdentifier}` required maximum {$this->attribute} characters",
