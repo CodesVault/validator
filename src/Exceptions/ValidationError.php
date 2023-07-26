@@ -41,6 +41,8 @@ class ValidationError
 			'integer'				=> "`{$this->dataIdentifier}` only allows integer type",
 			'url'					=> "`{$this->dataIdentifier}` only allows valid URL",
 			'sameValue'				=> "`{$this->dataIdentifier}` only allows same value as {$this->attribute}",
+
+			'array'				=> "`{$this->dataIdentifier}` only allows array",
 		];
 	}
 

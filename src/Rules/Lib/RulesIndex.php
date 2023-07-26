@@ -18,6 +18,7 @@ use Codesvault\Validator\Rules\Lowercase;
 use Codesvault\Validator\Rules\StringWithSymbol;
 use Codesvault\Validator\Rules\Uppercase;
 use Codesvault\Validator\Rules\Url;
+use Codesvault\Validator\Rules\ArrayRule;
 
 class RulesIndex
 {
@@ -58,6 +59,8 @@ class RulesIndex
 			'integer'			=> Integer::class,
 			'url'				=> Url::class,
 			'sameValue'			=> SameValue::class,
+
+			'array'			=> ArrayRule::class,
         ];
 	}
 }
