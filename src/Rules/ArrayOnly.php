@@ -5,7 +5,7 @@ namespace Codesvault\Validator\Rules;
 use Codesvault\Validator\Rules\Lib\Rule;
 use Codesvault\Validator\Exceptions\ValidationError;
 
-class ArrayRule implements Rule
+class ArrayOnly implements Rule
 {
     /**
      * Check the $value is an array

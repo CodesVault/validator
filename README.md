@@ -83,3 +83,4 @@ $validator->getData();
 | max | Check the value is less than or equal to the given value. |
 | integer | Check the value is integer. |
 | sameValue | Check the value is same as the given value. |
+| array | Check the value is an array. |

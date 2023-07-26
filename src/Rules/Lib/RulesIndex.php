@@ -18,7 +18,7 @@ use Codesvault\Validator\Rules\Lowercase;
 use Codesvault\Validator\Rules\StringWithSymbol;
 use Codesvault\Validator\Rules\Uppercase;
 use Codesvault\Validator\Rules\Url;
-use Codesvault\Validator\Rules\ArrayRule;
+use Codesvault\Validator\Rules\ArrayOnly;
 
 class RulesIndex
 {
@@ -60,7 +60,7 @@ class RulesIndex
 			'url'				=> Url::class,
 			'sameValue'			=> SameValue::class,
 
-			'array'			=> ArrayRule::class,
+			'array'				=> ArrayOnly::class,
         ];
 	}
 }
