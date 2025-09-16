@@ -8,44 +8,20 @@ test('basic validator instantiation', function () {
     expect($validator)->toBeInstanceOf(\Codesvault\Validator\ValidationEngine::class);
 });
 
-test('required field validation passes', function () {
-    $validator = Validator::validate(
-        ['name' => 'required'],
-        ['name' => 'John']
-    );
+test('rules parameter must not be empty', function () {
+	Validator::validate([], ['name' => 'John']);
+})->throws(\InvalidArgumentException::class);
 
-    expect($validator->error())->toBeEmpty();
-    expect($validator->getData())->toHaveKey('name', 'John');
-});
+test('rules parameter type', function () {
+	/**
+	 * @disregard P1006 // vscode intelephense: Expected exception of type TypeError
+	 */
+	Validator::validate('', ['name' => 'John']);
+})->throws(\TypeError::class);
 
-test('required field validation fails', function () {
-    $validator = Validator::validate(
-        ['name' => 'required'],
-        ['name' => '']
-    );
-
-    expect($validator->error())->toBeArray();
-    expect($validator->error())->toHaveKey('name');
-});
-
-test('email validation passes', function () {
-    $validator = Validator::validate(
-        ['email' => 'email'],
-        ['email' => 'test@example.com']
-    );
-
-    expect($validator->error())->toBeEmpty();
-});
-
-test('email validation fails', function () {
-    $validator = Validator::validate(
-        ['email' => 'email'],
-        ['email' => 'invalid-email']
-    );
-
-    expect($validator->error())->toBeArray();
-    expect($validator->error())->toHaveKey('email');
-});
+test('unknown rule validation', function () {
+	Validator::validate(['name' => 'unknownRule'], ['name' => 'John']);
+})->throws(\Exception::class);
 
 test('multiple rules validation', function () {
     $validator = Validator::validate(

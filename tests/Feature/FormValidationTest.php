@@ -64,4 +64,5 @@ test('partial form validation', function () {
 
     expect($validator->error())->toBeEmpty();
     expect($validator->getData())->toHaveKey('username', 'johndoe');
+    expect($validator->getData())->toHaveKey('bio', '');
 });

@@ -14,6 +14,10 @@ class Validator
      */
     public static function validate(array $rules, array $data = [])
     {
+        if (empty($rules)) {
+			throw new \InvalidArgumentException('Validation rules are required.');
+		}
+
         $validation = Factory::make($rules, $data);
         return $validation;
     }
