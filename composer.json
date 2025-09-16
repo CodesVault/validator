@@ -21,7 +21,10 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.23"
     },
     "keywords": [
         "validator",
@@ -31,5 +34,16 @@
         "php validator",
         "php validation",
         "codesvalut"
-    ]
+    ],
+    "scripts": {
+        "test": "pest",
+        "test-coverage": "pest --coverage",
+        "test-unit": "pest tests/Unit",
+        "test-feature": "pest tests/Feature"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
