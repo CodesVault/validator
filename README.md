@@ -24,6 +24,9 @@ $validator = Validator::validate(
 		'email'		=> 'required|email',
     ],
 );
+
+$data = $validator->getData();
+
 ```
 
 <br>
