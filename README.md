@@ -356,7 +356,10 @@ $validator = Validator::validate(
 );
 ```
 
-### Combining Multiple Rules
+<br>
+<br>
+
+## Form validation with Combining Multiple Rules
 
 You can combine multiple rules using the pipe (`|`) separator:
 
@@ -383,6 +386,8 @@ $validator = Validator::validate(
 $data = $validator->getData();
 
 ```
+
+<br>
 
 ### Error Handling Example
 
