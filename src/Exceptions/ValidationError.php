@@ -42,7 +42,9 @@ class ValidationError
 			'url'					=> "`{$this->dataIdentifier}` only allows valid URL",
 			'sameValue'				=> "`{$this->dataIdentifier}` only allows same value as {$this->attribute}",
 
-			'array'				=> "`{$this->dataIdentifier}` only allows array",
+			'array'					=> "`{$this->dataIdentifier}` only allows array",
+
+			'attr'					=> "`{$this->dataIdentifier}` rule attributes not defined",
 		];
 	}
 

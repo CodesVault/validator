@@ -38,7 +38,7 @@ class MinLength implements Rule
 		}
 
 		if (is_numeric($value)) {
-			$this->validationError->setErrorMessage("min", "`$dataIdentifier` required minimum $attribute digits");
+			$this->validationError->setErrorMessage("min", "`$dataIdentifier` required minimum $attribute");
 		}
 
 		if (is_array($value)) {

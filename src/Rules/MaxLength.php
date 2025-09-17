@@ -38,7 +38,7 @@ class MaxLength implements Rule
 		}
 
 		if (is_numeric($value)) {
-			$this->validationError->setErrorMessage("max", "`$dataIdentifier` required maximum $attribute digits");
+			$this->validationError->setErrorMessage("max", "`$dataIdentifier` required maximum $attribute");
 		}
 
 		if (is_array($value)) {

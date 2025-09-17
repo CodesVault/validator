@@ -27,7 +27,7 @@ trait Calculate
 
 	public function numaricLength($data, $size)
 	{
-		if (is_numeric($data) && strlen($data) < $size) {
+		if (is_numeric($data) && $data < $size) {
 			$this->accurate = false;
 			return false;
 		}

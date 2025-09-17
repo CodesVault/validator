@@ -19,6 +19,7 @@ use Codesvault\Validator\Rules\StringWithSymbol;
 use Codesvault\Validator\Rules\Uppercase;
 use Codesvault\Validator\Rules\Url;
 use Codesvault\Validator\Rules\ArrayOnly;
+use Codesvault\Validator\Rules\Each;
 
 class RulesIndex
 {
@@ -61,6 +62,7 @@ class RulesIndex
 			'sameValue'			=> SameValue::class,
 
 			'array'				=> ArrayOnly::class,
+			'each'				=> Each::class,
         ];
 	}
 }

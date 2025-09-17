@@ -36,13 +36,18 @@ class RulesParser
 	{
 		$rule = explode(':', $ruleName);
 
-		if ('min' === $rule[0] || 'max' === $rule[0]) {
-			$this->attribute = $rule[1];
+		if (
+			'min' === $rule[0] ||
+			'max' === $rule[0] ||
+			'sameValue' === $rule[0]
+		) {
+			$this->attribute = $rule[1] ?? null;
 			return $rule[0];
 		}
 
-		if ('sameValue' === $rule[0]) {
-			$this->attribute = $rule[1];
+		$rule = explode('::', $ruleName);
+		if ('each' === $rule[0]) {
+			$this->attribute = $rule[1] ?? null;
 			return $rule[0];
 		}
 
