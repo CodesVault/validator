@@ -38,7 +38,7 @@ class ValidationEngine
 				$this->errorLogHandler->add($dataIdentifier, $validate->getErrorMessage());
 			}
 
-			$this->setData($dataIdentifier, $val);
+			$this->setData($dataIdentifier, strip_tags($val));
 		}
 	}
 
