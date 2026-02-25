@@ -71,6 +71,7 @@ $validator = Validator::validate(
 | sameValue | Check the value is same as the given value. |
 | array | Check the value is an array. |
 | each | validate each item of an array. |
+| bool | validate boolean data |
 
 <br>
 <br>
