@@ -43,8 +43,9 @@ class ValidationError
 			'sameValue'				=> "`{$this->dataIdentifier}` only allows same value as {$this->attribute}",
 
 			'array'					=> "`{$this->dataIdentifier}` only allows array",
-
 			'attr'					=> "`{$this->dataIdentifier}` rule attributes not defined",
+
+			'bool'					=> "`{$this->dataIdentifier}` only allows boolean type (true, false, 0, 1)",
 		];
 	}
 

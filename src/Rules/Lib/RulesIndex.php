@@ -20,6 +20,7 @@ use Codesvault\Validator\Rules\Uppercase;
 use Codesvault\Validator\Rules\Url;
 use Codesvault\Validator\Rules\ArrayOnly;
 use Codesvault\Validator\Rules\Each;
+use Codesvault\Validator\Rules\Boolean;
 
 class RulesIndex
 {
@@ -63,6 +64,8 @@ class RulesIndex
 
 			'array'				=> ArrayOnly::class,
 			'each'				=> Each::class,
+
+			'bool'				=> Boolean::class,
         ];
 	}
 }
